@@ -34,7 +34,14 @@ const restaurant = {
     orderDelivery: function ({item, prize = 1.99, address = "HCM"}) {
         console.log(`Item ${item} ($${prize}) will be delivered to ${address}.`);
     },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
+    }
 };
+
+
+/*
 restaurant.orderDelivery({item: "pizza"});
 
 const {name, openingHours, categories} = restaurant;
@@ -62,3 +69,72 @@ console.log(a, b);
 // nested objects
 const {fri: {open: o, close: c}} = openingHours;
 console.log(o, c);
+*/
+
+/*
+// spread operator
+const arr = [7, 8, 9];
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+const newMenu = [...restaurant.mainMenu, "Egg-roll"];
+console.log(newMenu);
+
+// use spread operator to copy an array
+const mainMenuCopied = [...restaurant.mainMenu];
+console.log(mainMenuCopied);
+
+// join two arrays using spread operator
+const menu = [...restaurant.mainMenu, ...mainMenuCopied];
+console.log(menu);
+
+// spread operator can also be used on other iterables (arrays, strings, maps,
+// sets)
+const myName = "Chau";
+const letters = [...myName, " ", "c"];
+console.log(letters);
+console.log(...myName);
+
+// const ingredients = [prompt(`Let's make pasta! Ingredient 1:`),
+// prompt(`Ingredient 2:`), prompt(`Ingredient 3:`)]; console.log(ingredients);
+
+// restaurant.orderPasta(...ingredients);
+
+// spread operator on objects
+const newRestaurant = {foundedIn: 1995, ...restaurant, founder: "Chau"};
+console.log(newRestaurant);
+
+const restaurantCopied = {...restaurant};
+restaurantCopied.name = "This is a copied restaurant's name.";
+console.log(restaurantCopied.name);
+console.log(restaurant.name);
+*/
+
+const rest1 = {
+    name: 'Capri',
+    // numGuests: 20,
+    numGuests: 0,
+};
+
+const rest2 = {
+    name: 'La Piazza',
+    owner: 'Giovanni Rossi',
+}
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
+
+// rest1.owner = rest1.owner && '<ANONYMOUS>';
+// rest2.owner = rest2.owner && '<ANONYMOUS>';
+
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+
+console.log(rest1);
+console.log(rest2);
