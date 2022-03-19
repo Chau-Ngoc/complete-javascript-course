@@ -30,6 +30,7 @@
  Then, call the function again with players from game.scored
  */
 
+/*
 const game = {
     team1: "Bayern Munich",
     team2: "Borrussia Dortmund",
@@ -94,3 +95,4 @@ console.log(gk, fieldPlayers);
 console.log(allPlayers);
 console.log(players1Final);
 console.log(team1, draw, team2);
+*/
