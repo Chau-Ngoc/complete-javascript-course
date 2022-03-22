@@ -460,3 +460,25 @@ btnSort.addEventListener("click", function (event) {
  movements.sort((a, b) => b - a);
  console.log(movements);
  */
+
+const x = new Array(7);
+console.log(x);
+
+x.fill(1, 3, 5);
+console.log(x);
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+arr.fill(77, 1, 6);
+console.log(arr);
+
+const y = Array.from({ length: 10 }, () => 7);
+console.log(y);
+
+const z = Array.from({ length: 10 }, (_, i) => i + 1);
+console.log(z);
+
+const randomRolls = Array.from(
+    { length: 100 },
+    () => Math.trunc(Math.random() * 6) + 1
+);
+console.log(randomRolls);
